@@ -1,8 +1,5 @@
 import string
 class Solution:
     def isPalindrome(self, s: str) -> bool:
-        new = ""
-        for i in s:
-            if i.isalnum():
-                new+=i.lower()
-        return new == new[::-1]
+        s = s.lower().translate(str.maketrans("", "", " " + string.punctuation))
+        return s == s[::-1]
