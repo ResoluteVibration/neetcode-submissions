@@ -2,7 +2,6 @@ class Solution:
     def characterReplacement(self, s: str, k: int) -> int:
         left = 0
         max_len = 0
-        max_freq = 0
         seen = {}
         for right in range(len(s)):
             r = s[right]
